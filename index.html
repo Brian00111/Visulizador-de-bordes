@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js" defer></script>
+    <title>Previwer</title>
+</head>
+<body class="h-screen">
+    <h1 class="text-center font-bold text-5xl pt-4">Border Radius</h1>
+
+    <div class="container flex items-center max-w-5xl w-4/5 h-4/5 m-auto flex-wrap p-4">
+
+        <div id="visualizador" class="w-2/4 h-80">
+            <div id="border-item" class="w-4/5 h-72 m-auto"></div>
+        </div>
+        <div id="controles" class="w-2/5">
+            <label for="ejex-bottom" class="w-full inline-block my-3"> 
+                    top Left:<br>
+                <input type="range" id="ejeU-L" name="ejex" min="0" max="250" value="0" class="w-full">
+            </label>
+
+            <br>
+            <label for="ejey" class="w-full inline-block my-3"> 
+               Top Right:<br>
+                <input type="range" id="ejeU-R" name="ejey" min="0" max="250" value="0" class="w-full">
+            </label>
+            <br>
+
+            <label for="ejey" class="w-full inline-block my-3"> 
+                Bottom Left:<br>
+                <input type="range" id="ejeB-L" name="ejey" min="0" max="250" value="0" class="w-full">
+            </label>
+            <br>
+
+            <label for="ejey" class="w-full inline-block my-3"> 
+                bottom Right: <br>
+                <input type="range" id="ejeB-R" name="ejey" min="0" max="250" value="0" class="w-full">
+            </label>
+
+            <button id="reiniciar">Restart</button>
+
+        </div>
+    </div>
+    <div class="w-4/5 h-6 text-center py-8 font-medium text-2xl relative m-auto">
+        <p id="result" >
+            border-radius: <span>0</span>px <span>0</span>px <span>0</span>px <span>0</span>px;
+        </p>
+
+        <div id="copy" class="cursor-pointer absolute right-4 top-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            <div class="alertCopy">Copiado!</div>
+        </div>
+    
+    </div>
+
+    <script src="gsap.min.js"></script>
+</body>
+</html>
